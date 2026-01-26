@@ -62,4 +62,13 @@ export const movieAPI = {
   toggleFeatured: (id) => api.patch(`/movies/${id}/featured`),
 }
 
+// Review API
+export const reviewAPI = {
+  getReviews: (type, tmdbId) => api.get(`/reviews/${type}/${tmdbId}`),
+  addReview: (data) => api.post('/reviews', data),
+  addReply: (reviewId, comment) => api.post(`/reviews/${reviewId}/reply`, { comment }),
+  toggleLike: (reviewId) => api.post(`/reviews/${reviewId}/like`),
+  deleteReview: (reviewId) => api.delete(`/reviews/${reviewId}`),
+}
+
 export default api

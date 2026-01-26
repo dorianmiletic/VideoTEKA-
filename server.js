@@ -14,6 +14,7 @@ import authRoutes from './routes/auth.js';
 import movieRoutes from './routes/movies.js';
 import userRoutes from './routes/users.js';
 import tmdbRoutes from './routes/tmdb.js';
+import reviewRoutes from './routes/reviews.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -33,6 +34,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/movies', movieRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/tmdb', tmdbRoutes);
+app.use('/api/reviews', reviewRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

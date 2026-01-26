@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { tmdbAPI } from '../services/api'
 import MovieGrid from '../components/MovieGrid'
 import { getBackdropUrl } from '../utils/imageUrl'
@@ -52,12 +53,12 @@ const Home = () => {
                 <h1 className="text-5xl font-bold mb-4">{hero.title}</h1>
                 <p className="text-lg mb-6 line-clamp-3">{hero.overview}</p>
                 <div className="flex space-x-4">
-                  <button className="bg-primary hover:bg-red-700 px-8 py-3 rounded-lg font-semibold transition">
-                    ▶ Pogledaj
-                  </button>
-                  <button className="bg-gray-700 hover:bg-gray-600 px-8 py-3 rounded-lg font-semibold transition">
+                  <Link 
+                    to={`/details/movie/${hero.id}`}
+                    className="bg-primary hover:bg-red-700 px-8 py-3 rounded-lg font-semibold transition inline-block"
+                  >
                     ℹ Više informacija
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

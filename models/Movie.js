@@ -40,6 +40,5 @@ const movieSchema = new mongoose.Schema({
 });
 
 movieSchema.index({ title: 'text', overview: 'text' });
-movieSchema.index({ tmdbId: 1 });
 
 export default mongoose.model('Movie', movieSchema);
