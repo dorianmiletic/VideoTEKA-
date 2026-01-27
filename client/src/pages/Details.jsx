@@ -148,7 +148,7 @@ const Details = () => {
           <img
             src={getPosterUrl(details.poster_path)}
             alt={title}
-            className="w-64 rounded-lg shadow-2xl"
+            className="w-128 rounded-lg shadow-2xl"
           />
 
           {/* Info */}
