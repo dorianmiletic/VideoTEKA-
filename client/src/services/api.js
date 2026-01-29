@@ -51,6 +51,8 @@ export const userAPI = {
   getWatchlist: () => api.get('/users/watchlist'),
   addToWatchlist: (data) => api.post('/users/watchlist', data),
   removeFromWatchlist: (tmdbId) => api.delete(`/users/watchlist/${tmdbId}`),
+  getWatched: () => api.get('/users/watched'),
+  addToWatched: (data) => api.post('/users/watched', data),
 }
 
 // Movie API (Admin)
