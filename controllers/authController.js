@@ -31,7 +31,8 @@ export const register = async (req, res) => {
       username: user.username,
       email: user.email,
       role: user.role,
-      token: generateToken(user._id)
+      token: generateToken(user._id),
+      createdAt: user.createdAt,
     });
   } catch (error) {
     console.error('Register error:', error);
@@ -60,7 +61,8 @@ export const login = async (req, res) => {
       username: user.username,
       email: user.email,
       role: user.role,
-      token: generateToken(user._id)
+      token: generateToken(user._id),
+      createdAt: user.createdAt,
     });
   } catch (error) {
     console.error('Login error:', error);

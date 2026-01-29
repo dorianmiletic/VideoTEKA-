@@ -38,6 +38,7 @@ const Navbar = () => {
               <>
                 <Link to="/favorites" className="hover:text-primary transition">Omiljeni</Link>
                 <Link to="/watchlist" className="hover:text-primary transition">Watchlist</Link>
+                <Link to="/profile" className="hover:text-primary transition">Moj profil</Link>
                 {user?.role === 'admin' && (
                   <Link to="/admin" className="hover:text-primary transition">Admin</Link>
                 )}
