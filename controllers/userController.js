@@ -29,10 +29,8 @@ export const addToWatched = async (req, res) => {
 
     const { tmdbId, type, title, posterPath } = req.body
 
-    // Dodaj u watched
     user.watched.push({ tmdbId, type, title, posterPath })
 
-    // Ukloni iz watchlist
     user.watchlist = user.watchlist.filter(item => item.tmdbId !== tmdbId)
 
     await user.save()

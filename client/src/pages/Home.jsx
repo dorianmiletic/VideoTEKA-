@@ -57,7 +57,7 @@ const Home = () => {
                     to={`/details/movie/${hero.id}`}
                     className="bg-primary hover:bg-red-700 px-8 py-3 rounded-lg font-semibold transition inline-block"
                   >
-                    ℹ Više informacija
+                    Više informacija
                   </Link>
                 </div>
               </div>
@@ -68,13 +68,13 @@ const Home = () => {
 
       {/* Trending */}
       <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-6">🔥 Trending ovaj tjedan</h2>
+        <h2 className="text-3xl font-bold mb-6">Trending ovaj tjedan</h2>
         <MovieGrid items={trending} type="movie" />
       </div>
 
       {/* Popular */}
       <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-6">⭐ Popularni filmovi</h2>
+        <h2 className="text-3xl font-bold mb-6"> Popularni filmovi</h2>
         <MovieGrid items={popular} type="movie" />
       </div>
     </div>

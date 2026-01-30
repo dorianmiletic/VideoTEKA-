@@ -43,7 +43,7 @@ const Profile = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">👤 Profil korisnika</h1>
+      <h1 className="text-4xl font-bold mb-8"> Profil korisnika</h1>
 
       <div className="mb-8">
         <p><strong>Korisničko ime:</strong> {user.username}</p>

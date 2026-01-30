@@ -50,7 +50,7 @@ const AdminPanel = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">⚙️ Admin Panel</h1>
+      <h1 className="text-4xl font-bold mb-8"> Admin Panel</h1>
 
       <div className="bg-dark-light rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4">Filmovi u bazi ({movies.length})</h2>
