@@ -7,9 +7,10 @@ import {
   removeFromWatchlist,
   getWatchlist,
   addToWatched,
-  getWatched
+  getWatched,
+  getAllUsers,
 } from '../controllers/userController.js';
-import { protect } from '../middleware/auth.js';
+import { protect,admin } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -25,5 +26,7 @@ router.delete('/watchlist/:tmdbId', removeFromWatchlist);
 
 router.post('/watched', addToWatched); 
 router.get('/watched', getWatched);
+
+router.get('/', protect, admin, getAllUsers);
 
 export default router;

@@ -73,4 +73,16 @@ export const reviewAPI = {
   deleteReview: (reviewId) => api.delete(`/reviews/${reviewId}`),
 }
 
+export const adminAPI = {
+  getMovies: () => api.get('/admin/movies'),
+  deleteMovie: (id) => api.delete(`/admin/movies/${id}`),
+  toggleFeatured: (id) => api.patch(`/admin/movies/${id}/featured`),
+
+  getUsers: () => api.get('/admin/users'),
+  deleteUser: (id) => api.delete(`/admin/users/${id}`),
+
+  getReviews: () => api.get('/admin/reviews'),
+  deleteReview: (id) => api.delete(`/admin/reviews/${id}`),
+}
+
 export default api

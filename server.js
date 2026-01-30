@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import adminRoutes from './routes/admin.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -26,8 +27,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('✅ MongoDB connected successfully'))
-  .catch((err) => console.error('❌ MongoDB connection error:', err));
+  .then(() => console.log(' MongoDB connected successfully'))
+  .catch((err) => console.error(' MongoDB connection error:', err));
 
 // Routes
 app.use('/api/auth', authRoutes);
@@ -52,6 +53,9 @@ app.use((err, req, res, next) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📺 VideoTEKA+ backend is ready!`);
+  console.log(` Server running on http://localhost:${PORT}`);
+  console.log(` VideoTEKA+ backend is ready!`);
 });
+
+//admin
+app.use('/api/admin', adminRoutes)

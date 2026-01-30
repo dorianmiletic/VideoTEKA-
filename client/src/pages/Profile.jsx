@@ -53,7 +53,7 @@ const Profile = () => {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">🎬 Pogledano</h2>
+        <h2 className="text-2xl font-semibold mb-4"> Pogledano</h2>
         {watched.length === 0 ? <p>Niste označili nijedan film/seriju kao pogledano</p> : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {watched.map(item => (

@@ -120,3 +120,11 @@ export const deleteReview = async (req, res) => {
     res.status(500).json({ message: 'Error deleting review', error: error.message });
   }
 };
+export const getAllReviews = async (req, res) => {
+  try {
+    const reviews = await Review.find().populate('user', 'username email');
+    res.json(reviews);
+  } catch (err) {
+    res.status(500).json({ message: 'Error fetching reviews', error: err.message });
+  }
+}

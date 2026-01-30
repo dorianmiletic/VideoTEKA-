@@ -135,3 +135,12 @@ export const getWatchlist = async (req, res) => {
       .json({ message: "Error fetching watchlist", error: error.message });
   }
 };
+
+export const getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find().select('-password'); // izbaci password
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: 'Error fetching users', error: err.message });
+  }
+}
